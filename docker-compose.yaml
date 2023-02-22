@@ -1,0 +1,25 @@
+version: "3"
+services:
+  ## Stack Name (change "StackName" below)
+  StackName:
+  ## Pre-defined name (optional)
+  ## (Change "ContainerName" below)
+    container_name: ContainerName
+  ## Build local Dockerfile
+    build: .
+  ## Name image built from dockerfile
+  ## (change "ImageName" below)
+    image: ImageName
+  ## Set persistent volumes (bot code)
+  ## (local:container_path)
+    volumes:
+      - ./bot/:/bot
+  ## Set variables in .env file
+    env_file:
+      - secret.env
+  ## Open port if needed
+  ## (external:internal) 8000->5000
+#   ports:
+#      - "8000:5000"
+  ## Restart bot unless stopped
+    restart: unless-stopped
