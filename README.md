@@ -1,6 +1,7 @@
 # Python3 discord bot template (docker ready) (python3.9-slim, discord.py v2)
 
 ## This is designed as a template for creating a lightweight discord bot with or without docker
+If unfamiliar with how to create a discord bot or get a token see: https://www.writebots.com/discord-bot-token/
 
 ## Setup with docker:
 As easy as installing docker and docker-compose (if not installed already), cloning this repository and editing "secret.env" to add your own bot token, user ID, and guild/server ID for the commands to be registered to. You can also set image, stack, and container names in the "Dockerfile" and "docker-compose.yaml".  Once token and IDs are added simply run "docker-compose up" in the command line from the cloned directory.  Changes can be made to the bot code in the /bot directory while bot is running and upon using the /restart-bot command (usable by the user matching the user id set in .env file) or restarting the container, the changes will be loaded for speedy development.
