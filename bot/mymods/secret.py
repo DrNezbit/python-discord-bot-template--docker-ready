@@ -1,25 +1,32 @@
 import os
 
+##################################################
 ## 	Token can be obtained through discord developer portal
-def bot_token():
-	token=os.environ["TOKEN"]
-##	If not using docker remove line above, 
-##	uncomment line below, and add your token
-	#token= "Paste bot token here"
-	return token
 
+## If not using docker paste token below
+token="Paste_Here"
+
+##################################################
 ## 	Define bot owner id for restart command (Required for owner cog)
-def bot_owner():
-	owner_id= os.environ["USER"]
-##	If not using docker remove line above, 
-##	uncomment line below, and add your user id
-	#owner_id= "Paste your discord user id here"
-	return int(owner_id)
-	
+
+## If not using docker paste your user ID below
+owner_id="Paste_Here"
+
+##################################################
 ##	Test guild is required for commands to be instantly registered upon start.  See main.py and uncomment where necessary to register global commands.
+
+## If not using docker paste guild (server) ID below
+guild_id="Paste_Here"
+
+##################################################
+##################################################
+def bot_token():
+	TOKEN=os.getenv("TOKEN",default=token) ; return TOKEN
+##################################################
+def bot_owner():
+	OWNER=os.getenv("USER",default=owner_id) ; return int(OWNER)
+##################################################
 def test_guild():
-	guild_id= os.environ["GUILD"]
-##	If not using docker remove line above, 
-##	uncomment line below, and add your guild id
-	#guild_id="Paste server/guild id here"
-	return int(guild_id)
+	GUILD=os.getenv("GUILD",default=guild_id) ; return int(GUILD)
+##################################################
+	
