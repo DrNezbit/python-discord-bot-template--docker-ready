@@ -8,8 +8,8 @@ services:
   ## Build local Dockerfile
     build: .
   ## Name image built from dockerfile
-  ## (change "ImageName" below)
-    image: ImageName
+  ## (change "imagename" below)
+    image: imagename
   ## Set persistent volumes (bot code)
   ## (local:container_path)
     volumes:

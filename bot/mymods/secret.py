@@ -21,12 +21,18 @@ guild_id="Paste_Here"
 ##################################################
 ##################################################
 def bot_token():
-	TOKEN=os.getenv("TOKEN",default=token) ; return TOKEN
+	TOKEN=os.getenv("TOKEN",default="")
+	if TOKEN=="": TOKEN=token
+	return TOKEN
 ##################################################
 def bot_owner():
-	OWNER=os.getenv("USER",default=owner_id) ; return int(OWNER)
+	OWNER=os.getenv("USER",default="")
+	if OWNER=="": OWNER=owner_id 
+	return int(OWNER)
 ##################################################
 def test_guild():
-	GUILD=os.getenv("GUILD",default=guild_id) ; return int(GUILD)
+	GUILD=os.getenv("GUILD",default="") 
+	if GUILD=="": GUILD=guild_id
+	return int(GUILD)
 ##################################################
 	
