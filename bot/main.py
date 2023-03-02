@@ -34,6 +34,7 @@ client = MyClient() ; tree = client.tree
 #	ON READY
 @client.event
 async def on_ready():
+	print(f"#####  discord.py v{discord.__version__}  #####")
 	print(f'Logged in as {client.user} On {len(client.guilds)} servers')
 	print('------')
 ##################################################
