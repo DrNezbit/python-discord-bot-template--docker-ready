@@ -1,4 +1,4 @@
-# Python3 discord bot template (docker ready) (python3.9-slim, discord.py v2)
+# Python3 discord bot template (docker ready) (python3.11-slim, discord.py v2)
 
 ## This is designed as a template for creating a lightweight discord bot with or without docker
 If unfamiliar with how to create a discord bot or get a token see: https://www.writebots.com/discord-bot-token/
