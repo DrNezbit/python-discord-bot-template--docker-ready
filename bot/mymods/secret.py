@@ -26,7 +26,7 @@ def bot_token():
 	return TOKEN
 ##################################################
 def bot_owner():
-	OWNER=os.getenv("USER",default="")
+	OWNER=os.getenv("OWNER",default="")
 	if OWNER=="": OWNER=owner_id 
 	return int(OWNER)
 ##################################################
